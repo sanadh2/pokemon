@@ -9,6 +9,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  background-size: contain;
   
 }
 input[type=text]{
@@ -24,13 +25,16 @@ input::placeholder{
 }
 
 .container{
-  margin:50px 20px 0px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  row-gap: 50px;
-  column-gap:50px;
+  margin:50px 20px 0px 20px;
+  display:flex;
+  column-gap:10px;
+  row-gap: 25px;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content:stretch;
 }
 .pokemon{
+
   background-color: #2f3d7e ;
   color:#faeaeb;
   text-align: center;
@@ -38,7 +42,7 @@ input::placeholder{
   border-radius: 5px;
   cursor: pointer;
   font-size: 13px;
-  max-width:150px;
+  width:85px;
   padding-bottom: 10px;
   transition: box-shadow 0.15s, color 1s ease-in, text-decoration 2s ease-in-out;
 }
@@ -60,9 +64,4 @@ p{
 }
 .pokemon:hover> p{
   display: none;
-}
-@media (max-width:500px){
-  .pokemon{
-    background-color: black;
-  }
 }
